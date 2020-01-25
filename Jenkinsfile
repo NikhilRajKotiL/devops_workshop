@@ -1,7 +1,7 @@
 //test comment
 node('master') {
     stage('Git Clone') {
-        git branch: 'master', changelog: true, url: 'https://github.com/sanusatyadarshi/nmit.git'
+        git branch: 'master', changelog: true, url: 'https://github.com/NikhilRajKotiL/devops_workshop.git'
         sh "ls"
     }
 
@@ -13,7 +13,7 @@ node('master') {
     }
     
     stage('RUN Python Script') {
-        sh "chmod 777 hello-nmit.py"
+        sh "chmod 777 hello-world.py"
         sh "./hello-nmit.py"
     }
 
